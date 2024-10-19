@@ -1,0 +1,46 @@
+Corey Keller
+Lab 4 Psuedocode
+02.19.24
+Problem Description: Create a python program that can convert Dungeons and Dragons currencies to other forms of currencies based off of input from the user,
+The program should take multiple inputs to account for the various coin types in DnD. It should then request what coin type to convert to.
+The utility file associated with the executable file should contain all of the functions needed to convert the user's inputs.
+
+Step 1: Create a utility file containing the functions needed to convert the coin types given.
+	a. Coin types needed:
+        	-Gold
+        	-Silver
+        	-Platinum
+        	-Copper
+        	-Electrum
+	b. Gold should be converted to each coin type
+        	Example: coinType = coin/gold or coin*gold
+	c. Each coin type should be converted to gold
+        	Example: coinType = gold/coin or gold*coin
+	d. A function needs to be created to add all of the values together once converted 	to gold
+        	def goldTotal(a,b,c,d,e):
+            		totalGold=a+b+c+d+e
+            		return totalGold
+
+Step 2: Begin the exectuable file to take user input
+	a. Import the utility file
+		import utilityFile
+	b. Ask for user input
+		name=input("ask for name")
+		coinAmount=input("enter how much of coin you have")
+		#do this for every coin type
+	c. Convert the inputs from str to float
+		coinAmount=float(coinAmount)
+	d. Call the conversions to gold using user inputs
+		utilityFile.coinConversion(coinAmount)
+	e. Call function to combine the values into one gold amount
+		utilityFile.goldTotal(a+b+c+d+e)
+	f. Ask user what they want to convert to
+		userConvert=input("what to convert to).lower()
+	g. Use elif statements to print the conversion
+		if userConvert=="coin":
+			print("you have # coin")
+		elif userConvert=="nextcoin":
+			print("you have # this coin")
+		else:
+			print("invalid coin, aborted")
+	
